@@ -19,18 +19,18 @@ class PickerActivity : AppCompatActivity() {
         finish()
     }
 
-    fun launchColorPicker() {
+    private fun launchColorPicker() {
         val intent = Intent(Intent.ACTION_OPEN_EYE_DROPPER)
         eyeDropperLauncher.launch(intent)
     }
 
-    fun copyToClipboard(text: String) {
+    private fun copyToClipboard(text: String) {
         val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
         val clip = ClipData.newPlainText("color", text)
         clipboard.setPrimaryClip(clip)
     }
 
-    fun showColor(color: Int) {
+    private fun showColor(color: Int) {
         val hexColor = String.format("#%06X", (0xFFFFFF and color))
         copyToClipboard(hexColor)
     }
