@@ -15,7 +15,7 @@ android {
         versionName = "1.1"
 
         ndk {
-            abiFilters.add("arm64-v8a")
+           abiFilters += listOf("arm64-v8a")
         }
     }
 
@@ -23,7 +23,7 @@ android {
         create("release") {
             val storeFile = file("release_key.jks")
             val storePassword = System.getenv("KEY_STORE_PASSWORD")
-            val keyAlias = System.getenv("ALIAS")
+            val keyAlias = System.getenv("KEY_STORE_ALIAS")
             val keyPassword = System.getenv("KEY_STORE_PASSWORD")
 
             if (storeFile.exists() && !storePassword.isNullOrBlank() && !keyAlias.isNullOrBlank() && !keyPassword.isNullOrBlank()) {
