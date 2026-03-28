@@ -15,7 +15,7 @@ android {
         versionName = "1.1"
 
         ndk {
-           abiFilters += listOf("arm64-v8a")
+            abiFilters += listOf("arm64-v8a")
         }
     }
 

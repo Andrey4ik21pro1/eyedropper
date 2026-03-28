@@ -7,7 +7,7 @@
 
 ---
 ## Reference
-A lightweight app that adds a color picker tile to the Quick Settings panel using the system native eyedropper.
+A lightweight app that adds a color picker tile to the Quick Settings panel using the system-native eyedropper.
 
 **Requirements:** Android 17 Beta 2+ or Android CANARY 2510+.
 
